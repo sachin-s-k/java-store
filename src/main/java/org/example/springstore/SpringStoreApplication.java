@@ -2,12 +2,19 @@ package org.example.springstore;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
 public class SpringStoreApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringStoreApplication.class, args);
-	}
+    public static void main(String[] args) {
+
+        ApplicationContext context=SpringApplication.run(SpringStoreApplication.class, args);
+        var manager= context.getBean(NotificationManager.class);
+        manager.sendNotification("Hello World! this is sachin");
+
+  ;
+
+    }
 
 }
