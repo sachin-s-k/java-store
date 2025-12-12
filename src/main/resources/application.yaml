@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: spring-store
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/store?createDatabaseIfNotExist=true
+    username: root
+    password: NewPassword123!
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+server:
+  port: 8080
+
+payment-gateway: stripe
+
+mail:
+  host: smtp.mail.com
+  port: 5761
+
+

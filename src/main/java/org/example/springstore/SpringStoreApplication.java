@@ -3,17 +3,18 @@ package org.example.springstore;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import user.registration.User;
+import user.registration.UserService;
 
 @SpringBootApplication
 public class SpringStoreApplication {
 
     public static void main(String[] args) {
 
-        ApplicationContext context=SpringApplication.run(SpringStoreApplication.class, args);
-        var manager= context.getBean(NotificationManager.class);
-        manager.sendNotification("Hello World! this is sachin");
+      SpringApplication.run(SpringStoreApplication.class, args);
 
-  ;
+
+
 
     }
 
